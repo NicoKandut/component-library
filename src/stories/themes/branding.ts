@@ -1,7 +1,7 @@
 const branding = {
   colors: {
-    accentColor: "#3344dd",
-    accentHover: "#4455ee",
+    accentColor: "#5555dd",
+    accentHover: "#7777ff",
     accentText: "#fff",
   },
 };

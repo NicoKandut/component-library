@@ -52,3 +52,25 @@ export const flexMedia = () => css`
   display: block;
   object-fit: contain;
 `;
+
+/**
+ * Limits content to a maximum width and centers it
+ */
+export function centeredMaxWidth({ theme }: ThemeProps<Theme>) {
+  return css`
+    width: 100%;
+    max-width: ${theme.dimensions.bodyWidth};
+    margin-left: auto;
+    margin-right: auto;
+  `;
+}
+
+/**
+ * Default styling for widgets. Fixed height and padding.
+ */
+export function defaultBlock({ theme }: ThemeProps<Theme>) {
+  return css`
+    height: ${theme.dimensions.blockHeight};
+    padding: 0 ${theme.dimensions.gutter};
+  `;
+}

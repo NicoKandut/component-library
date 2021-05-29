@@ -7,7 +7,7 @@ import { px } from "./utils/units";
  */
 export const defaultBorder = ({ theme }: ThemeProps<Theme>) => css`
   border-color: ${theme.colors.accentColor};
-  border-width: ${px(theme.dimensions.borderWidth)};
+  border-width: ${theme.dimensions.borderWidth};
   ${borderRadius}
   border-style: solid;
 `;
@@ -16,5 +16,5 @@ export const defaultBorder = ({ theme }: ThemeProps<Theme>) => css`
  * Applies border radius based on the theme.
  */
 export const borderRadius = ({ theme }: ThemeProps<Theme>) => css`
-  border-radius: ${px(theme.dimensions.borderRadius)};
+  border-radius: ${theme.dimensions.borderRadius};
 `;

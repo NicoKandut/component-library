@@ -1,9 +1,8 @@
 import merge from "lodash/merge";
-import { Theme } from "../types/theme";
 import branding from "./branding";
 import { structual } from "./structural";
 
-export const dark: Theme = merge({}, structual, branding, {
+export const dark = merge({}, structual, branding, {
   name: "Dark",
   colors: {
     text: "#fff",
@@ -15,5 +14,6 @@ export const dark: Theme = merge({}, structual, branding, {
     layerBgHighlight: "#ffffff22",
     liked: "#ff0d50",
     activeForeground: "#fff",
+    thumbColor: "#fff",
   },
 });

@@ -1,11 +1,10 @@
 import React from "react";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { PrimaryButton, SecondaryButton, SubtleButton } from "./Button";
-import { Component } from "react";
 
 export default {
   title: "Design System/Atoms/Button",
-  component: [PrimaryButton, SecondaryButton],
+  component: [PrimaryButton, SecondaryButton, SubtleButton],
   decorators: [withKnobs],
 };
 

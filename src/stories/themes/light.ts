@@ -1,8 +1,7 @@
 import { dark } from "./dark";
 import merge from "lodash/merge";
-import { Theme } from "../types/theme";
 
-export const light: Theme = merge({}, dark, {
+export const light = merge({}, dark, {
   name: "Light",
   colors: {
     text: "#000",
@@ -13,5 +12,6 @@ export const light: Theme = merge({}, dark, {
     layerBgSolid: "#dddddd",
     layerBgHighlight: "#00000022",
     activeForeground: "#000",
+    thumbColor: "#00000033",
   },
 });

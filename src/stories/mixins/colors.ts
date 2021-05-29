@@ -1,5 +1,6 @@
 import { css, ThemeProps } from "styled-components";
 import { Theme } from "../types/theme";
+import { boxShadow } from "./shadow";
 
 /**
  * Element becomes accentColor on hover, and is highlighted when active/focused
@@ -39,3 +40,13 @@ export const focusable = ({ theme }: ThemeProps<Theme>) => css`
 export const defaultForeground = ({ theme }: ThemeProps<Theme>) => css`
   color: ${theme.colors.text};
 `;
+
+/**
+ * Element will look like a new layer
+ */
+export function layer({ theme }: ThemeProps<Theme>) {
+  return css`
+    background-color: ${theme.colors.layerBg};
+    ${boxShadow({ theme })}
+  `;
+}

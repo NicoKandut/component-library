@@ -1,24 +1,26 @@
+import { px, s } from "../mixins/utils/units";
+
 export const structual = {
   dimensions: {
-    borderRadius: 3,
-    borderWidth: 2,
-    spacing: 4,
-    bigSpacing: 8,
-    hugeSpacing: 16,
-    gutter: 8,
-    blockHeight: 32,
-    bodyWidth: 1000,
+    borderRadius: px(3),
+    borderWidth: px(2),
+    spacing: px(4),
+    bigSpacing: px(8),
+    hugeSpacing: px(16),
+    gutter: px(8),
+    blockHeight: px(32),
+    bodyWidth: px(1000),
   },
   shadow: {
-    radius: 2,
+    radius: px(2),
     color: "#00000000",
   },
   timings: {
-    transitionTime: 0.2,
-    longTransitionTime: 0.2,
+    transitionTime: s(0.2),
+    longTransitionTime: s(0.2),
   },
   fontSizes: {
-    content: 15,
-    bigTitle: 24,
+    content: px(15),
+    bigTitle: px(24),
   },
 };

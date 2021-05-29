@@ -1,16 +1,17 @@
 import { DefaultTheme } from "styled-components";
+import { string, string } from "../mixins/utils/units";
 
 export interface Theme extends DefaultTheme {
   name: string;
   dimensions: {
-    borderRadius: number;
-    borderWidth: number;
-    spacing: number;
-    bigSpacing: number;
-    hugeSpacing: number;
-    gutter: number;
-    blockHeight: number;
-    bodyWidth: number;
+    borderRadius: string;
+    borderWidth: string;
+    spacing: string;
+    bigSpacing: string;
+    hugeSpacing: string;
+    gutter: string;
+    blockHeight: string;
+    bodyWidth: string;
   };
   colors: {
     text: string;
@@ -25,17 +26,18 @@ export interface Theme extends DefaultTheme {
     layerBgHighlight: string;
     liked: string;
     activeForeground: string;
+    thumbColor: string;
   };
   shadow: {
-    radius: number;
+    radius: string;
     color: string;
   };
   timings: {
-    transitionTime: number;
-    longTransitionTime: number;
+    transitionTime: string;
+    longTransitionTime: string;
   };
   fontSizes: {
-    content: number;
-    bigTitle: number;
+    content: string;
+    bigTitle: string;
   };
 }

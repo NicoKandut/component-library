@@ -8,7 +8,6 @@ import {
   primaryHover,
   secondaryHover,
 } from "../../mixins";
-import { px, s } from "../../mixins/utils/units";
 import { Theme } from "../../types/theme";
 
 type ButtonProps = { block?: boolean } & Pick<
@@ -17,18 +16,22 @@ type ButtonProps = { block?: boolean } & Pick<
 > &
   ThemeProps<Theme>;
 
+const BaseButton = (props: ButtonProps) => {
+  return <button {...props} />;
+};
+
 /**
  * Basic form of the text button.
  */
-const BaseButton = styled.button(
+const StyledButton = styled(BaseButton)(
   ({ theme, block }: ButtonProps) => css`
     ${flexRowWithSpacing}
 
-    height: ${px(theme.dimensions.blockHeight)};
-    padding: 0 ${px(theme.dimensions.bigSpacing)};
-    font-size: ${px(theme.fontSizes.content)};
+    height: ${theme.dimensions.blockHeight};
+    padding: 0 ${theme.dimensions.bigSpacing};
+    font-size: ${theme.fontSizes.content};
 
-    transition: all ${s(theme.timings.longTransitionTime)} ease-out;
+    transition: all ${theme.timings.longTransitionTime} ease-out;
 
     ${block
       ? css`
@@ -51,7 +54,7 @@ const BaseButton = styled.button(
 /**
  * Basic button. Uses theme colors.
  */
-export const PrimaryButton = styled(BaseButton)`
+export const PrimaryButton = styled(StyledButton)`
   ${defaultBorder}
   ${primaryHover}
 `;
@@ -59,7 +62,7 @@ export const PrimaryButton = styled(BaseButton)`
 /**
  * Basic button. Uses theme colors.
  */
-export const SecondaryButton = styled(BaseButton)`
+export const SecondaryButton = styled(StyledButton)`
   ${defaultBorder}
   ${secondaryHover}
 `;
@@ -72,7 +75,7 @@ export const BlockButton = styled(PrimaryButton)``;
 /**
  * Button without background. For use with icons.
  */
-export const SubtleButton = styled(BaseButton)`
+export const SubtleButton = styled(StyledButton)`
   ${defaultForeground}
   ${dropShadow}
 
